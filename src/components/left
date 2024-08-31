@@ -1,26 +1,19 @@
-import React from 'react';
-import { Tabs, Tab, Box } from '@mui/material';
-import Tab1 from './Tab1';
-import Tab2 from './Tab2';
+import React, { useState } from 'react';
+import { Tabs } from 'antd';
+import 'antd/dist/antd.css';
+
+const { TabPane } = Tabs;
 
 const LeftPage: React.FC = () => {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
-
   return (
-    <Box sx={{ width: '100%', height: '100%' }}>
-      <Tabs value={value} onChange={handleChange} aria-label="tabs">
-        <Tab label="Tab 1" />
-        <Tab label="Tab 2" />
-      </Tabs>
-      <Box sx={{ padding: 2 }}>
-        {value === 0 && <Tab1 />}
-        {value === 1 && <Tab2 />}
-      </Box>
-    </Box>
+    <Tabs defaultActiveKey="1">
+      <TabPane tab="Tab 1" key="1">
+        <p>Details for Tab 1</p>
+      </TabPane>
+      <TabPane tab="Tab 2" key="2">
+        <p>Details for Tab 2</p>
+      </TabPane>
+    </Tabs>
   );
 };
 
