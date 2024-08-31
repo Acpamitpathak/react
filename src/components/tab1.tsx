@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
+//npm install @mui/material @emotion/react @emotion/styled
+
 
 const LeftPage: React.FC = () => {
   const [value, setValue] = React.useState(0);
