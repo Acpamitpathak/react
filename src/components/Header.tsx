@@ -1,6 +1,6 @@
 import React from 'react';
-import { Layout, Avatar, Typography } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { Layout, Avatar, Typography, Space, Tooltip } from 'antd';
+import { UserOutlined, BellOutlined, SearchOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Header: AntHeader } = Layout;
 const { Text } = Typography;
@@ -9,8 +9,22 @@ const Header: React.FC = () => {
   return (
     <AntHeader style={headerStyles}>
       <div style={containerStyles}>
+        <div style={logoContainerStyles}>
+          <img src="https://worldvectorlogo.com/logo/ubs-logo-svg" alt="UBS Logo" style={logoStyles} />
+        </div>
         <Text style={appNameStyles}>My App</Text>
         <div style={profileContainerStyles}>
+          <Space style={iconContainerStyles}>
+            <Tooltip title="Search">
+              <SearchOutlined style={iconStyles} />
+            </Tooltip>
+            <Tooltip title="Notifications">
+              <BellOutlined style={iconStyles} />
+            </Tooltip>
+            <Tooltip title="Settings">
+              <SettingOutlined style={iconStyles} />
+            </Tooltip>
+          </Space>
           <Avatar
             size={48}
             src="https://randomuser.me/api/portraits/men/75.jpg"
@@ -31,7 +45,8 @@ const headerStyles: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   padding: '0 20px',
-  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)', // Adds subtle shadow for separation
+  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)', // Shadow for separation
+  borderBottom: '1px solid #e8e8e8', // Light border for separation
 };
 
 const containerStyles: React.CSSProperties = {
@@ -43,6 +58,16 @@ const containerStyles: React.CSSProperties = {
   margin: '0 auto',
 };
 
+const logoContainerStyles: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  marginRight: '20px', // Space between logo and app name
+};
+
+const logoStyles: React.CSSProperties = {
+  height: '32px', // Adjust the size as needed
+};
+
 const appNameStyles: React.CSSProperties = {
   color: '#333',
   fontSize: '24px',
@@ -52,6 +77,19 @@ const appNameStyles: React.CSSProperties = {
 const profileContainerStyles: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
+};
+
+const iconContainerStyles: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '20px', // Space between icons
+  marginRight: '20px', // Space between icons and avatar
+};
+
+const iconStyles: React.CSSProperties = {
+  fontSize: '18px',
+  color: '#333', // Icon color
+  cursor: 'pointer',
 };
 
 const userInfoStyles: React.CSSProperties = {
