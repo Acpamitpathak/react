@@ -1,12 +1,12 @@
 import React from 'react';
 
-const LeftPage: React.FC = () => {
+const RightPage: React.FC = () => {
   return (
-    <div style={{ background: '#f0f0f0', padding: '20px', height: '100%', overflow: 'auto' }}>
-      {/* Left page content */}
-      <h2>Left Page</h2>
+    <div style={{ background: '#ffffff', padding: '20px', height: '100%', overflow: 'auto' }}>
+      {/* Right page content */}
+      <h2>Right Page</h2>
     </div>
   );
 };
 
-export default LeftPage;
+export default RightPage;
