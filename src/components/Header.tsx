@@ -27,10 +27,11 @@ const Header: React.FC = () => {
 };
 
 const headerStyles: React.CSSProperties = {
-  backgroundColor: '#001529',
+  backgroundColor: 'white',
   display: 'flex',
   alignItems: 'center',
   padding: '0 20px',
+  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)', // Adds subtle shadow for separation
 };
 
 const containerStyles: React.CSSProperties = {
@@ -43,7 +44,7 @@ const containerStyles: React.CSSProperties = {
 };
 
 const appNameStyles: React.CSSProperties = {
-  color: 'white',
+  color: '#333',
   fontSize: '24px',
   fontWeight: 'bold',
 };
@@ -51,23 +52,22 @@ const appNameStyles: React.CSSProperties = {
 const profileContainerStyles: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
-  gap: '10px', // CSS gap for spacing between avatar and user info
 };
 
 const userInfoStyles: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  marginLeft: '10px', // Margin between avatar and text
+  marginLeft: '10px', // Spacing between the avatar and user info
 };
 
 const usernameStyles: React.CSSProperties = {
-  color: 'white',
+  color: '#333',
   fontSize: '16px',
   fontWeight: 'bold',
 };
 
 const emailStyles: React.CSSProperties = {
-  color: 'white',
+  color: '#555',
   fontSize: '14px',
 };
 
