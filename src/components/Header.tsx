@@ -2,6 +2,9 @@ import React from 'react';
 import { Layout, Avatar, Typography, Space } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
+//npm install @ant-design/icons
+
+
 const { Header: AntHeader } = Layout;
 const { Text } = Typography;
 
