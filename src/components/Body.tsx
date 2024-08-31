@@ -1,14 +1,17 @@
 import React from 'react';
+import LeftPage from './LeftPage';
+import RightPage from './RightPage';
 
-type BodyProps = {
-  style?: React.CSSProperties;
-};
-
-const Body: React.FC<BodyProps> = ({ style }) => {
+const Body: React.FC = () => {
   return (
-    <main style={style}>
-      <p>This is the body of the app.</p>
-    </main>
+    <div style={{ display: 'flex', height: 'calc(100vh - 100px)', overflow: 'hidden' }}>
+      <div style={{ flex: '0 0 40%', background: '#f0f0f0' }}>
+        <LeftPage />
+      </div>
+      <div style={{ flex: '0 0 60%', background: '#ffffff' }}>
+        <RightPage />
+      </div>
+    </div>
   );
 };
 
