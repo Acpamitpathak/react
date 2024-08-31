@@ -1,10 +1,13 @@
 import React from 'react';
+import { Layout } from 'antd';
+
+const { Footer: AntFooter } = Layout;
 
 const Footer: React.FC = () => {
   return (
-    <footer style={{ padding: '10px', backgroundColor: '#282c34', color: 'white' }}>
-      <p>© 2024 My App Footer</p>
-    </footer>
+    <AntFooter style={{ textAlign: 'center', backgroundColor: '#001529', color: 'white' }}>
+      <p>© 2024 My App Footer with Ant Design</p>
+    </AntFooter>
   );
 };
 
