@@ -1,14 +1,12 @@
 import React from 'react';
-import { Layout } from 'antd';
 
-const { Footer: AntFooter } = Layout;
-
-const Footer: React.FC = () => {
+const LeftPage: React.FC = () => {
   return (
-    <AntFooter style={{ textAlign: 'center', backgroundColor: '#001529', color: 'white' }}>
-      <p>© 2024 My App Footer with Ant Design</p>
-    </AntFooter>
+    <div style={{ background: '#f0f0f0', padding: '20px', height: '100%', overflow: 'auto' }}>
+      {/* Left page content */}
+      <h2>Left Page</h2>
+    </div>
   );
 };
 
-export default Footer;
+export default LeftPage;
